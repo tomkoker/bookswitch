@@ -34,8 +34,8 @@ def signup():
                     (request.json['username'],), one=True)
 
     if user is not None:
-        # TODO: report user already exists
-        return ""
+        # report user already exists
+        return jsonify({'result': 'user already exists'})
 
     hashed = bcrypt.hashpw(request.json['password'].encode('utf-8'),
                            bcrypt.gensalt())
@@ -59,8 +59,8 @@ def login():
                     (request.json['username'],), one=True)
 
     if user is None:
-        # TODO: report wrong username
-        return ""
+        # report wrong username
+        return jsonify({'result': 'wrong username'})
 
     if bcrypt.checkpw(request.json['password'].encode('utf-8'),
                       user['password'].encode('utf-8')):
@@ -68,8 +68,8 @@ def login():
         session["user_id"] = user["id"]
         return jsonify({'result': 'success'})
 
-    # TODO: return wrong password
-    return ""
+    # return wrong password
+    return jsonify({'result': 'wrong password'})
 
 
 @app.route('/api/logout')
