@@ -74,7 +74,7 @@ def logout():
 
 @app.route('/api/new-listing', methods=['POST'])
 def new_listing():
-    print request.json['listing']['book']
+
     book = Book.with_isbn(request.json['listing']['book']['isbn'])
     if book is None:
         Book.add(request.json['listing']['book']['isbn'],

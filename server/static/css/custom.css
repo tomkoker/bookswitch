@@ -1,0 +1,32 @@
+
+/* Custom CSS for things we can't do with boot strap */
+
+body {
+	background-color: #EEE;
+}
+
+#header {
+	height: 12em;
+}
+
+#logoText {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 42pt;
+	font-color: #444;
+	vertical-align: bottom;
+	display: inline;
+	padding-left: .25em;
+}
+
+#logoImg {
+	height: 100%;
+}
+
+#navbar {
+	height: 2.25em;
+}
+
+.page-header{
+	border-bottom: 1px solid #CCC;
+}
