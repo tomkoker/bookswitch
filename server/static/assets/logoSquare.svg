@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<!-- Stand Alone Logo -->
+<!-- Robaire Galliath -->
+<!--   38 April 17    -->
+
+<svg xmlns:svg = "http://www.w3.org/2000/svg" 
+	 xmlns = "http://www.w3.org/2000/svg" 
+	 version = "1.0"
+	 width = "70" height = "70">
+
+	<!-- F Body -->
+	<path 
+		d = "M42.5 70 l0 -50 a20 20 0 0 1 20 -20 l0 10 a10 10 0 0 0 -10 10 l0 50 Z" 
+		fill = "#444"/>
+
+	<!-- F Cross -->
+	<path 
+		d = "M62.5 40 l-40 0 l0 -10 l40 0 Z" 
+		fill = "#444"/>
+
+	<!-- B Body -->
+	<path 
+		d = "M7.5 0 l0 50 a20 20 0 1 0 20 -20 l0 -5 l-12.5 10 l12.5 10 l0 -5 a10 10 0 1 1 -10 10 l0 -50 Z" 
+		fill = "#80955d"/>
+
+</svg>
+
