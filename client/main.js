@@ -7,6 +7,7 @@ import Buy from './components/Buy.vue'
 import Sell from './components/Sell.vue'
 import Login from './components/Login.vue'
 import Signup from './components/Signup.vue'
+import Account from './components/Account.vue'
 
 import Auth from './auth.js'
 
@@ -18,7 +19,8 @@ const router = new VueRouter({
     { path: '/buy', component: Buy},
     { path: '/sell', component: Sell, meta: {auth: true}},
     { path: '/login', component: Login},
-    { path: '/signup', component: Signup}
+    { path: '/signup', component: Signup},
+    { path: '/account', component: Account}
   ]
 })
 

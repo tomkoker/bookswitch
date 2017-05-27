@@ -34,9 +34,24 @@
                 </div>
               </div>
             </div>
-            <div v-if="user.authenticated">
-              <button class="btn" v-on:click="logout()">Logout</button>
+
+            <div class="col-md-6 col-xs-4" v-if="user.authenticated">
+              <div class="row">
+                <div class="col-lg-12 hidden-sm hidden-xs hidden-md">
+                  <div class="btn-group accountBtn" role="group">
+                    <router-link to="/account" class="btn btn-default"> Account </router-link>
+                    <button v-on:click="logout()" class="btn btn-default"> Log Out </button>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-lg">
+                  <div class="btn-group-vertical accountBtn" role="group">
+                    <router-link to="/account" class="btn btn-default"> Account </router-link>
+                    <button v-on:click="logout()" class="btn btn-default"> Log Out </button>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
 
         </div>
