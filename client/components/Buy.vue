@@ -1,6 +1,6 @@
 <template>
   <div id='buy'>
-  
+
       <!-- Search Bar -->
       <div>
         <input type="text" class="form-control" id="searchBar" placeholder="Search for a book...">
@@ -33,7 +33,7 @@ export default {
   mounted: function() {
     var self = this;
     axios.get('/api/all').then(function(response) {
-      self.listings = response.data
+      self.listings = response.data.data.listings
     }).catch(function(error) {
       console.log(error);
     });

@@ -46,12 +46,14 @@ pip install -r requirements.txt
 npm install
 ```
 
+Create instance folder and config file:
+```bash
+mkdir instance && touch instance/config.py
+```
+
 Initialize database:
 ```bash
-python
->>> from server import db
->>> db.init_db()
->>> quit()
+python init_db.py
 ```
 
 Build and start the server:
@@ -59,6 +61,33 @@ Build and start the server:
 webpack
 python run.py
 ```
+
+## Private API Documentation
+
+**Responses**
+All responses will look like the following:
+```json
+{
+    "status": "success", // 'error' or 'fail'
+    "data": {...}
+}
+```
+
+**Routes**
+
+| Location                                 | Input                     | Description           |
+| ---------------------------------------- | ------------------------- | --------------------- |
+| `/api/signup`                            | username, password, email | Creates a new user    |
+| `/api/activate/<payload>`                |                           | Activates user        |
+| `/api/login/`                            | username, password        | Logs in user          |
+| `/api/logout/`                           |                           | Logs out user         |
+| `/api/me/`                               |                           | Returns user status   |
+| `/api/new-listing` , changing to: `POST: /api/listings/` | listing                   | Creates a new listing |
+| `/api/all`, changing to: `GET: /api/listings/` |                           | Shows all listings    |
+|                                          |                           |                       |
+|                                          |                           |                       |
+|                                          |                           |                       |
+
 
 ## License
 

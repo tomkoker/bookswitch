@@ -7,5 +7,4 @@ build.js
 venv
 *.pyc
 database.db
-
-
+instance

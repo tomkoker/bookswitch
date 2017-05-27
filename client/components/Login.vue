@@ -22,6 +22,7 @@
 <script>
 
 import axios from 'axios'
+import Auth from '../auth.js'
 
 export default {
   data: function() {
@@ -44,8 +45,8 @@ export default {
             })
           .then(function(response){
             if(response.data.status == "success"){
-              // set authenticated to true in parent
-              self.$parent.authenticated = true;
+              // set authenticated to true
+              Auth.user.authenticated = true;
 
               // redirect to home
               self.$root.$router.push('/');

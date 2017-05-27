@@ -63,7 +63,7 @@ export default {
       console.log(this.listing.book.isbn)
       var self = this;
       var listing = this.listing;
-      if(listing.email && listing.book.isbn && listing.book.title &&
+      if(listing.book.isbn && listing.book.title &&
         listing.condition && listing.book.author && listing.price && listing.description){
           axios.post('/api/new-listing', {listing: listing}).then(function(response){
             console.log(response);
