@@ -63,6 +63,10 @@ body {
 	border-bottom: 1px solid #CCC;
 }
 
+#dynamicContent {
+	margin-top: 10px;
+}
+
 #transaction, #account, #schoolName {
 	font-family: 'Raleway', sans-serif;
 	font-size: 24pt;
