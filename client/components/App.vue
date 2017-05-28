@@ -20,7 +20,7 @@
 
 
             <!-- Fix this mess by using v-bind:class to dynamically adjust bootstrap, cleaning up redundant html -->
-            <!-- Although that means the page won't adjust on the fly, it would require a reload of the page to take effect -->
+            <!-- Although that means the page won't adjust on the fly, it would require a reload of the page to take effect, I think... -->
 
             <!-- Additionally it should be possible to use a v-bind to adjust the to="/blah" parameters dynamically -->
             <!-- Used in combination with a v-text: it should be possible to consolidate these two similar blocks of code -->

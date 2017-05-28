@@ -3,27 +3,22 @@
   	<div class="row">
 
       <!-- Menu Bar -->
-	  <div class="col-xs-2">
-	    <ul>
-	      <li> Stuff </li>
-	      <li> More Stuff </li>
-	      <li> Other Stuff </li>
-	      <li> Not Stuff </li>
-	    </ul>
+	  <div class="col-xs-4">
+	    <div class="btn-group-vertical accountBtn" role="group">
+	      <router-link to="/account/overview" class="btn btn-default"> Overview </router-link>
+	      <router-link to="/account/listings" class="btn btn-default"> Listings </router-link>
+	      <router-link to="/account/history" class="btn btn-default"> History </router-link>
+	      <router-link to="/account/options" class="btn btn-default"> Options </router-link>
+	    </div>
 	  </div>
 
 	  <!-- Content -->
-	  <div class="col-xs-10">
+	  <div class="col-xs-8">
 	  	<div class="row">
 
-	  	  <!-- Greeting Message -->
+	  	  <!-- Dynamic Content -->
 	  	  <div class="col-xs-12">
-	  	    <p v:text="USER NAME"> Welcome + USER NAME HERE </p> <!-- Use a v:text to adjust the content the user sees. -->
-	  	  </div>
-
-	  	  <!-- Selection dependent information -->
-	  	  <!-- It might be best to use nested routers here -->
-	  	  <div class="col-xs-12">
+	  	  	<router-view></router-view>
 	  	  </div>
 
 
