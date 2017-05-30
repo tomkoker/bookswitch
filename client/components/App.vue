@@ -10,13 +10,20 @@
         <div class="col-md-8 col-md-offset-2 col-xs-12">
 
           <div class="row">
-            <div class="col-md-6 col-xs-8">
+            <div class="col-md-6 col-xs-8" v-once>
               <img id="logoImg" class="hidden-sm hidden-xs" src="/assets/logo.svg"/>
               <h1 id="logoText" class="hidden-sm hidden-xs"> bookflip </h1>
 
               <img id="logoImgSmall" class="hidden-md hidden-lg" sr="/assets/logo.svg"/>
               <h1 id="logoTextSmall" class="hidden-md hidden-lg"> bookflip </h1>
             </div>
+
+
+            <!-- Fix this mess by using v-bind:class to dynamically adjust bootstrap, cleaning up redundant html -->
+            <!-- Although that means the page won't adjust on the fly, it would require a reload of the page to take effect, I think... -->
+
+            <!-- Additionally it should be possible to use a v-bind to adjust the to="/blah" parameters dynamically -->
+            <!-- Used in combination with a v-text: it should be possible to consolidate these two similar blocks of code -->
 
             <div class="col-md-6 col-xs-4" v-if="!user.authenticated">
               <div class="row">
@@ -34,9 +41,24 @@
                 </div>
               </div>
             </div>
-            <div v-if="user.authenticated">
-              <button class="btn" v-on:click="logout()">Logout</button>
+
+            <div class="col-md-6 col-xs-4" v-if="user.authenticated">
+              <div class="row">
+                <div class="col-lg-12 hidden-sm hidden-xs hidden-md">
+                  <div class="btn-group accountBtn" role="group">
+                    <router-link to="/account" class="btn btn-default"> Account </router-link>
+                    <button v-on:click="logout()" class="btn btn-default"> Log Out </button>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-lg">
+                  <div class="btn-group-vertical accountBtn" role="group">
+                    <router-link to="/account" class="btn btn-default"> Account </router-link>
+                    <button v-on:click="logout()" class="btn btn-default"> Log Out </button>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
 
         </div>
@@ -47,9 +69,11 @@
       <div id="navbar" class="row">
         <div class="col-md-8 col-md-offset-2 col-xs-12">
 
+          <!-- In the future use a v:text here -->
           <div id="schoolName" class="col-md-9 hidden-sm hidden-xs"> Worcester Polytechnic Institute </div>
           <div id="schoolName" class="col-xs-4 hidden-md hidden-lg"> WPI </div>
 
+          <!-- Again, using v:bind these can be consolidated -->
           <div id="transaction" class="col-md-3 col-xs-8" v-if="user.authenticated">
             <router-link to="/buy">Buy </router-link>
             |
@@ -59,7 +83,7 @@
           <div id="transaction" class="col-md-3 col-xs-8" v-else>
             <router-link to="/buy"> Buy </router-link>
             |
-            <router-link to="/sell"> Sell </router-link>
+            <router-link to="/login"> Sell </router-link>
           </div>
 
         </div>
@@ -67,12 +91,14 @@
     </div>
 
     <!-- Dynamic Content -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="dynamicContent">
       <div class="row">
-        <!-- Dynamicaly Loaded Content -->
+
+        <!-- Dynamically Loaded Content -->
         <div class="col-md-8 col-md-offset-2 col-xs-12">
           <router-view></router-view>
         </div>
+
       </div>
     </div>
 
