@@ -29,7 +29,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo npm install -g webpack
 ```
 
-### Installation
+### The Installation
 Clone and change directory:
 ```bash
 git clone https://github.com/tomkoker/bookflip && cd bookflip
