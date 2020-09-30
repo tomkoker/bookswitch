@@ -1,6 +1,6 @@
 <img src="server/static/assets/logo.png" alt="Logo" height="100">
 
-# bookflip
+# bookflip - You’ll find it here!
 
 [![Dependency Status](https://david-dm.org/tomkoker/bookflip.svg)](https://david-dm.org/tomkoker/bookflip)
 [![Code Climate](https://codeclimate.com/github/tomkoker/bookflip/badges/gpa.svg)](https://codeclimate.com/github/tomkoker/bookflip)
